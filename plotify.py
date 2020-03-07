@@ -1,0 +1,10 @@
+#define function for visualization (line plots)
+def plotify(pct_kill_rate,market_price):
+    pct_kill_rate.plot(use_index=True)
+    market_price.plot(use_index=True)
+    plt.title(f'Graph of {pct_kill_rate.name} vs. {market_price.name} over applicable date range')
+    plt.xlabel(pct_kill_rate.name)
+    plt.ylabel(market_price.name)
+    plt.legend()
+    plt.grid()
+    plt.show()
